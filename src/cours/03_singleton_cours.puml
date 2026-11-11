@@ -1,0 +1,19 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Singleton {
+    {static} - instance : Singleton
+    + x : int
+    + y : int
+    - Singleton()
+    - Singleton(x : int, y : int)
+    {static} + getInstance() : Singleton
+    {static} + getInstance(x : int, y : int) : Singleton
+    + somme(x : int, y : int) : int
+    + moyenne(x : int, y : int) : float
+    + affiche() : void
+    + clone() : Object
+}
+
+Singleton --> Singleton : instance
+@enduml
